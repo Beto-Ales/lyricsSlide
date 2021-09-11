@@ -1,0 +1,14 @@
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\bin\Debug\netcoreapp3.1\LyricsSlide.exe
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\bin\Debug\netcoreapp3.1\LyricsSlide.deps.json
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\bin\Debug\netcoreapp3.1\LyricsSlide.runtimeconfig.json
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\bin\Debug\netcoreapp3.1\LyricsSlide.runtimeconfig.dev.json
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\bin\Debug\netcoreapp3.1\LyricsSlide.dll
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\bin\Debug\netcoreapp3.1\LyricsSlide.pdb
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\obj\Debug\netcoreapp3.1\LyricsSlide.csproj.AssemblyReference.cache
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\obj\Debug\netcoreapp3.1\LyricsSlide.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\obj\Debug\netcoreapp3.1\LyricsSlide.AssemblyInfoInputs.cache
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\obj\Debug\netcoreapp3.1\LyricsSlide.AssemblyInfo.cs
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\obj\Debug\netcoreapp3.1\LyricsSlide.csproj.CoreCompileInputs.cache
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\obj\Debug\netcoreapp3.1\LyricsSlide.dll
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\obj\Debug\netcoreapp3.1\LyricsSlide.pdb
+C:\Users\germa\source\repos\LyricsSlide\LyricsSlide\obj\Debug\netcoreapp3.1\LyricsSlide.genruntimeconfig.cache
