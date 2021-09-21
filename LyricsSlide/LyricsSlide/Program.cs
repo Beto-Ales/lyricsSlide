@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace LyricsSlide
 {
@@ -6,43 +6,16 @@ namespace LyricsSlide
     {
         static void Main(string[] args)
         {
+            //create object
+            var beatles = new SongLyrics();
 
-            //general variables
-            //-----------------            
-
-            //general instructions
-            string instructions = @"Press up/down arrow to display next/previous paragraph
-press right/left arrow to display next/previous song
-
-Press X to end
----------------------------------------------
-";
-
-            //all the songs
-            string[][] songs = new string[2][];
-
-            //track the progress though the different parts of a song
-            //it cannot be under 0
-            byte progress = 0;
-
-            //songs index
-            //it cannot be under 0
-            byte song = 0;
-
-            //Index for creating new song lyrics
-            //I don't want to override the array
-            byte newSongI = 0;
-
-            //which key was pressed
-            ConsoleKeyInfo keyInfo;
-
-
-            //LyricsSlide for the songs
+            //Load lyrics
             //-------------------------
 
-            songs[newSongI] = new string[]
-            {
-                @"Let It Be 
+            //the beatles
+
+            //let it be
+            beatles.Lyrics(@"Let It Be 
 The Beatles
 
 When I find myself in times of trouble, Mother Mary comes to me
@@ -77,125 +50,104 @@ Speaking words of wisdom, let it be",
 The Beatles
 
 And let it be, let it be, let it be, let it be
-Whisper words of wisdom, let it be"
-            };
+Whisper words of wisdom, let it be");
 
-            ++newSongI;
-
-            //another song
-
-            songs[newSongI] = new string[]
-            {
-                @"Here Comes the Sun
+            //love me do
+            beatles.Lyrics(@"Love Me Do
 The Beatles
 
-Here comes the sun do, do, do
-Here comes the sun
-And I say it's all right",
-
-
-                @"Here Comes the Sun
+Love, love me do
+You know I love you
+I'll always be true
+So please, love me do
+Whoa, love me do",
+                @"Love Me Do
 The Beatles
 
-Little darling, it's been a long cold lonely winter
-Little darling, it seems like years since it's been here",
-
-
-                @"Here Comes the Sun
+Love, love me do
+You know I love you
+I'll always be true
+So please, love me do
+Whoa, love me do",
+                @"Love Me Do
 The Beatles
 
-Here comes the sun do, do, do
-Here comes the sun
-And I say it's all right",
-
-
-                @"Here Comes the Sun
+Someone to love
+Somebody new
+Someone to love
+Someone like you",
+                @"Love Me Do
 The Beatles
 
-Little darling, the smiles returning to the faces
-Little darling, it feels like years since it's been here",
-
-
-                @"Here Comes the Sun
+Love, love me do
+You know I love you
+I'll always be true
+So please, love me do
+Whoa, love me do",
+                @"Love Me Do
 The Beatles
 
-Here comes the sun do, do, do
-Here comes the sun
-And I say it's all right",
-            };
+Love, love me do
+You know I love you
+I'll always be true
+So please, love me do
+Whoa, love me do
+Yeah, love me do
+Whoa, oh, love me do");
 
-            ++newSongI;
+            beatles.Lyrics(@"Twist And Shout
+the beatles
 
+Well, shake it up, baby, now (Shake it up, baby)
+Twist and shout (Twist and shout)
+C'mon c'mon, c'mon, c'mon, baby, now (Come on baby)
+Come on and work it on out (Work it on out)",
+                @"Twist And Shout
+the beatles
 
-            //1 first song paragraph
+Well, work it on out, honey (Work it on out)
+You know you look so good (Look so good)
+You know you got me goin' now (Got me goin')
+Just like I knew you would (Like I knew you would)",
+                @"Twist And Shout
+the beatles
 
-            Console.WriteLine(instructions);
-            Console.WriteLine(songs[song][progress]);
+Well, shake it up, baby, now (Shake it up, baby)
+Twist and shout (Twist and shout)
+C'mon, c'mon, c'mon, c'mon, baby, now (Come on, baby)
+Come on and work it on out (Work it on out)",
+                @"Twist And Shout
+the beatles
 
-            //Console.WriteLine(songs[0].Length - 1);
+Well, you twist, you little girl (Twist, little girl)
+You know you twist so fine (Twist so fine)
+Come on and twist a little closer now (Twist a little closer)
+And let me know that you're mine (Let me know you're mine)",
+                @"Twist And Shout
+the beatles
 
+Well, shake it up, baby, now (Shake it up, baby)
+Twist and shout (Twist and shout)
+C'mon, c'mon, c'mon, c'mon, baby, now (Come on, baby)
+Come on and work it on out (Work it on out)",
+                @"Twist And Shout
+the beatles
 
-            //2 key event
+Well, you twist, you little girl (Twist, little girl)
+You know you twist so fine (Twist so fine)
+Come on and twist a little closer now (Twist a little closer)
+And let me know that you're mine (Let me know you're mine)",
+                @"Twist And Shout
+the beatles
 
-            do
-            {
-                keyInfo = Console.ReadKey();
-                //Console.WriteLine(keyInfo.Key);
+Well, shake it, shake it, shake it, baby, now (Shake it up baby)
+Well, shake it, shake it, shake it, baby, now (Shake it up baby)
+Well, shake it, shake it, shake it, baby, now (Shake it up baby)");
 
-                if (progress < songs[song].Length - 1 && keyInfo.Key == ConsoleKey.DownArrow)
-                {
-                    Console.Clear();
-                    ++progress;
-                    Console.WriteLine(instructions);
-                    Console.WriteLine(songs[song][progress]);
-                }
+            //display lyrics
+            //--------------
 
-                if (progress > 0 && keyInfo.Key == ConsoleKey.UpArrow)
-                {
-                    Console.Clear();
-                    --progress;
-                    Console.WriteLine(instructions);
-                    Console.WriteLine(songs[song][progress]);
-                }
-
-
-                
-                //LeftArrow
-                if (song < songs.Length - 1 && keyInfo.Key == ConsoleKey.RightArrow)
-                {
-                    Console.Clear();
-                    progress = 0;
-                    ++song;
-                    Console.WriteLine(instructions);
-                    Console.WriteLine(songs[song][progress]);
-                }
-
-
-                if (song > 0 && keyInfo.Key == ConsoleKey.LeftArrow)
-                {
-                    Console.Clear();
-                    progress = 0;
-                    --song;
-                    Console.WriteLine(instructions);
-                    Console.WriteLine(songs[song][progress]);
-                }
-            }
-            while (keyInfo.Key != ConsoleKey.X);
-
-
-
-
-
-
-            //    do
-            //{
-            //    Console.WriteLine("it works");
-            //}
-            //while (keyInfo.Key == ConsoleKey.DownArrow);
-
-            //Console.WriteLine(keyInfo.Key);
-
-            //Console.WriteLine(songs[0][1]);
+            beatles.DisplayLyrics();
         }
     }
 }
